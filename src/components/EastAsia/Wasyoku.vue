@@ -1,7 +1,7 @@
 <template>
   <!-- 変更する箇所に！ついています。基本的にはこれをコピーして使い回してください。 -->
-  <div id="zentai">
-    <div class="batsu">×</div>
+  <div id="zentai" v-show="showContent">
+    <button class="batsu" v-on:click="close">×</button>
     <div id="gohan">
       <div class="content">
         <div class="title">和食御前</div>
@@ -38,6 +38,21 @@
   </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      showContent: true,
+    }
+  },
+  methods: {
+    close: function () {
+      this.showContent = false
+    },
+  },
+}
+</script>
+
 <style scoped>
 #zentai {
   background-color: #fffff9;
@@ -45,6 +60,7 @@
   border-radius: 20px;
   padding: 10px;
   font-family: TsukuARdGothic-Regular;
+  box-shadow: 4px 4px #f5f5f5;
 }
 a {
   text-decoration: none;
@@ -147,7 +163,7 @@ a.btn-mod:focus {
   justify-content: center;
   align-items: center;
   border-radius: 100%;
-  width: 1.3em;
+  width: 1.5em;
   line-height: 1.3em;
   cursor: pointer;
   transition: 0.2s;
