@@ -1,14 +1,24 @@
 <template>
   <div class="Gmap">
     <h1>Google Map</h1>
+    <div class="modal">
+      <Modal @close="closeModal" v-if="modal" />
+    </div>
     <div class="map" ref="map" style="height: 500px; width: 90%"></div>
   </div>
 </template>
 
 <script>
+import Modal from "./Modal.vue"
 export default {
+  components: {
+    Modal,
+  },
+
   data() {
     return {
+      modal: false,
+
       map: "",
       myLatLng: { lat: 35.68, lng: 139.76 },
       markers: [
@@ -17,17 +27,18 @@ export default {
           name: "Tokyo",
           lat: 35.68,
           lng: 139.76,
+          food: "和食御膳",
         },
         {
           name: "Australia",
           lat: -33.52,
           lng: 151.12,
+          food: "ミートパイ",
         },
       ],
-      marker: null,
-      infoWindow: null,
     }
   },
+
   mounted() {
     console.log(window.google)
     let timer = setInterval(() => {
@@ -38,44 +49,58 @@ export default {
           zoom: 2,
         })
         for (let i = 0; i < this.markers.length; i++) {
-          this.marker = new window.google.maps.Marker({
+          const marker = new window.google.maps.Marker({
             position: {
-              lat: this.markers[i]["lat"],
-              lng: this.markers[i]["lng"],
+              lat: this.markers[i].lat,
+              lng: this.markers[i].lng,
             },
+            // icon: {
+            //   url: "../images/icon1.png",
+            //   scaledSize: new window.google.maps.Size(20, 20),
+            // },
             map: this.map,
           })
-          this.infoWindow = new window.google.maps.InfoWindow({
+
+          const contentString =
+            '<div class = "name">' +
+            this.markers[i].name +
+            "</div>" +
+            '<a href v-on:click="openModal">' +
+            this.markers[i].food +
+            "</a>"
+          // +'<div id = "overlay">' +
+          // "</div>"
+
+          const infoWindow = new window.google.maps.InfoWindow({
             content: contentString,
           })
 
-          // this.marker.addListener("click", function () {
-          //   this.infowindow.open(this.map, this.marker)
-          // })
+          const hoverinfo = new window.google.maps.InfoWindow({
+            content: contentString,
+          })
+
+          marker.addListener("click", function () {
+            infoWindow.open(this.map, marker)
+          })
+          marker.addListener("mouseover", function () {
+            hoverinfo.open(this.map, marker)
+          })
+          marker.addListener("mouseout", function () {
+            hoverinfo.close(this.map, marker)
+          })
         }
-        const contentString = "<div>" + this.marker.name + "</div>"
       }
     }, 500)
   },
-  // methods() {
-  //   this.infoWindow = new window.google.maps.InfoWindow({
-  //     content: "<div>" + this.marker.name + "</div>",
-  //   })
-
-  //   // marker.addListener("click", function () {
-  //   //   infowindow.open(this.map, marker)
-  //   // })
-  // },
+  methods: {
+    openModal() {
+      this.modal = true
+    },
+    closeModal() {
+      this.modal = false
+    },
+  },
 }
-
-//<サンプル>
-//  var infoWindow = new google.maps.InfoWindow({
-//       content: '<div><h3 style="text-decoration:none;">3,280万円/㎡ 1.1億円/坪</h3> <span style="color:green;">千代田区丸の内2-4-1</span></div>'
-//     });
-
-//     marker.addListener('click', function() {
-//       infoWindow.open(map, marker);
-//     });
 </script>
 
 <style>
