@@ -4,7 +4,7 @@
     <button class="batsu" v-on:click="close">×</button>
     <div id="gohan">
       <div class="content">
-        <div class="title">和食御前</div>
+        <div class="title">御膳</div>
         <div class="kuni">日本</div>
       </div>
     </div>
