@@ -11,7 +11,7 @@
     <div id="gazou">
       <div class="content">
         <!-- 画像を変更。imagesフォルダに追加してください。 -->
-        <img src="../../images/wasyoku.jpg" width="280px" />
+        <img src="../../images/Humms.jpg" width="280px" />
       </div>
     </div>
 

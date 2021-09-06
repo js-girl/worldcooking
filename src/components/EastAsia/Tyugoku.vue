@@ -11,7 +11,7 @@
     </div>
     <div id="gazou">
       <div class="content">
-        <img src="../../images/wasyoku.jpg" width="280px" />
+        <img src="../../images/mabo.jpg" width="280px" />
       </div>
     </div>
 
