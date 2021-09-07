@@ -54,12 +54,12 @@
 
 <script>
 import Wasyoku from "./components/EastAsia/Wasyoku.vue"
-import GoogleMap from "./components/Map.vue"
+// import GoogleMap from "./components/Map.vue"
 export default {
   name: "App",
   components: {
     Wasyoku,
-    GoogleMap,
+    // GoogleMap,
   },
 }
 </script>
