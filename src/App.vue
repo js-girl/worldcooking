@@ -6,9 +6,9 @@
     </div>
     <div section="content2">
       <div class="main-coppy">
-        <h2>世界の料理を <br />日本で楽しもう。</h2>
+        <h2>世界の料理を <br />日本で楽しもう</h2>
       </div>
-      <div class="sub-coppy">世界の料理、集めました。</div>
+      <div class="sub-coppy">世界の料理、集めました</div>
       <div class="main-pic">
         <img class="pict" src="./images/wasyoku.jpg" width="500px" />
       </div>
