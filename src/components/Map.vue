@@ -1,23 +1,30 @@
 <template>
-  <div class="Gmap">
-    <h1>Google Map</h1>
-    <div class="modal">
-      <Modal @close="closeModal" v-if="modal" />
+  <div>
+    <button v-on:click="openModal">Click</button>
+    <div id="overlay" v-show="showContent" v-on:click="closeModal">
+      <div id="content">
+        <Australia />
+      </div>
     </div>
-    <div class="map" ref="map" style="height: 500px; width: 90%"></div>
+    <div class="Gmap">
+      <h1>Google Map</h1>
+      <div class="map" ref="map" style="height: 500px; width: 90%"></div>
+    </div>
   </div>
 </template>
 
 <script>
-import Modal from "./Modal.vue"
+import Wasyoku from "./EastAsia/Wasyoku.vue"
+import Australia from "./Oseania/Austlaria.vue"
 export default {
   components: {
-    Modal,
+    // Wasyoku,
+    Australia,
   },
 
   data() {
     return {
-      modal: false,
+      showContent: false,
 
       map: "",
       myLatLng: { lat: 35.68, lng: 139.76 },
@@ -28,12 +35,14 @@ export default {
           lat: 35.68,
           lng: 139.76,
           food: "和食御膳",
+          component: Wasyoku,
         },
         {
           name: "Australia",
           lat: -33.52,
           lng: 151.12,
           food: "ミートパイ",
+          component: Australia,
         },
       ],
     }
@@ -93,11 +102,11 @@ export default {
     }, 500)
   },
   methods: {
-    openModal() {
-      this.modal = true
+    openModal: function () {
+      this.showContent = true
     },
-    closeModal() {
-      this.modal = false
+    closeModal: function () {
+      this.showContent = false
     },
   },
 }
@@ -109,5 +118,28 @@ export default {
   align-items: center;
   display: flex;
   color: #ffc9d2;
+}
+
+#overlay {
+  /*要素を重ねた時の順番*/
+  z-index: 2;
+
+  /*画面全体を覆う設定*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  /*画面の中央に要素を表示させる設定*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#content {
+  z-index: 1;
+  padding: 1em;
 }
 </style>
