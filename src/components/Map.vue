@@ -7,7 +7,7 @@
       </div>
     </div>
     <div class="Gmap">
-      <h1>Google Map</h1>
+      <!-- <h1>Google Map</h1> -->
       <div class="map" ref="map" style="height: 500px; width: 90%"></div>
     </div>
   </div>
