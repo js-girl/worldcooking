@@ -5,7 +5,6 @@
     </div>
     <div section="content1">
       <GoogleMap />
-      <Wasyok />
     </div>
     <div section="content2">
       <div class="main-coppy">
@@ -21,53 +20,33 @@
         <br />コロナ禍でも海外旅行気分を味わえます。
       </div>
     </div>
-    <div section="content31">
-      <div class="sec-title">
-        <h2>おすすめの世界料理</h2>
-      </div>
-      <div class="cbox-wrapper">
-        <div class="cooking-box">
-          <div class="pic">画像</div>
-          <div class="mb-10">
-            <a href="#" class="btn btn-mod btn-border btn-circle btn-large"
-              >詳しく見る</a
-            >
-          </div>
-        </div>
-        <div class="cooking-box">
-          <div class="pic">画像</div>
-          <div class="mb-10">
-            <a href="#" class="btn btn-mod btn-border btn-circle btn-large"
-              >詳しく見る</a
-            >
-          </div>
-        </div>
-        <div class="cooking-box">
-          <div class="pic">画像</div>
-          <div class="mb-10">
-            <a href="#" class="btn btn-mod btn-border btn-circle btn-large"
-              >詳しく見る</a
-            >
-          </div>
-        </div>
-      </div>
+    <div section="content3">
+      <Slide />
     </div>
+
+    <footer><small>&copy;js-girls.2021</small></footer>
   </div>
 </template>
 
 <script>
-// import Wasyoku from "./components/EastAsia/Wasyoku.vue"
 import GoogleMap from "./components/Map.vue"
+import Slide from "./components/Slide.vue"
+
 export default {
   name: "App",
   components: {
-    // Wasyoku,
     GoogleMap,
+    Slide,
   },
 }
 </script>
 
 <style>
+footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
 #app {
   font-family: TsukuARdGothic-Regular;
   display: flex;
@@ -114,15 +93,11 @@ export default {
   margin-top: 50px;
   text-align: center;
 }
-.cbox-wrapper {
-  display: flex;
-  justify-content: center;
-  align-content: center;
+.content3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
-.cooking-box {
-  width: 300px;
-  margin: 5px;
-}
+
 /* ボタン */
 .mb-10 {
   margin-top: 10px;
