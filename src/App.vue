@@ -3,9 +3,7 @@
     <div class="ue">
       <h1>World cooking</h1>
     </div>
-    <div section="content1">
-      <GoogleMap />
-    </div>
+
     <div section="content2">
       <div class="main-coppy">
         <h2>世界の料理を <br />日本で楽しもう。</h2>
@@ -19,6 +17,9 @@
         <br />お店を探すをクリックすると、日本で楽しめるレストランが表示されます。
         <br />コロナ禍でも海外旅行気分を味わえます。
       </div>
+    </div>
+    <div section="content1">
+      <GoogleMap />
     </div>
     <div section="content3">
       <Slide />
