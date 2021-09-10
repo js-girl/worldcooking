@@ -70,8 +70,8 @@ import Sweden from "./Europe/Sweden.vue"
 import Swizerland from "./Europe/Swizerland.vue"
 import Ukraine from "./Europe/Ukraine.vue"
 // Middleeast
-import Saujiarabia from "./Middleeast/Saujiarabia.vue"
-import Toruko from "./Middleeast/Toruko.vue"
+import Saujiarabia from "./Mlddleeast/Saujiarabia.vue"
+import Toruko from "./Mlddleeast/Toruko.vue"
 
 // NouthAmerica
 import America from "./NouthAmerica/America.vue"
