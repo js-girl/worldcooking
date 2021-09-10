@@ -3,9 +3,6 @@
     <div v-for="food in all" :key="food.id">
       {{ food.name }}
     </div>
-    <div>
-      <img src="" alt="お店の名前" id="food-image" />
-    </div>
   </div>
 </template>
 
@@ -18,7 +15,7 @@ export default {
     getrestaurant: function() {
       this.axios
         .get(
-          "hotpepper/gourmet/v1/?key=703a952c5ae9eaa7&large_area=Z011&format=json"
+          "hotpepper/gourmet/v1/?key=703a952c5ae9eaa7&large_area=Z011&genre=G006&format=json"
         )
         .then((res) => res.data)
         .then((value) => {
