@@ -450,6 +450,7 @@ export default {
     }, 500)
   },
   methods: {
+    //
     openModal: function () {
       this.showContent = true
       console.log(this.num)
