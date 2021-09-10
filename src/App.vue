@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="ue">
-      <h1>World cokking</h1>
+      <h1>World cooking</h1>
     </div>
     <div section="content1">
       <GoogleMap />
