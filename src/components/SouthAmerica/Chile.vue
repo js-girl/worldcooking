@@ -5,7 +5,7 @@
     <div id="gohan">
       <div class="content">
         <div class="title">エンパナーダ</div>
-        <div class="kuni">日本</div>
+        <div class="kuni">チリ</div>
       </div>
     </div>
     <div id="gazou">
