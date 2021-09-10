@@ -1,8 +1,17 @@
 <template>
-  <div>
-    <div v-for="food in all" :key="food.id">
-      {{ food.name }}
+  <div id="genre">
+    🍽 shop list 🍽
+    <div id="shop">
+      <div v-for="food in all" :key="food.id">
+        <img :src="food.logo_image" alt="" />
+
+        <br />
+        <a v-bind:href="food.urls.pc">{{ food.name }}</a>
+      </div>
     </div>
+    <br />
+    Powered by
+    <a href="http://webservice.recruit.co.jp/">ホットペッパー Webサービス</a>
   </div>
 </template>
 
@@ -29,4 +38,19 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+#genre {
+  font-size: 20px;
+  font-family: Avenir;
+  margin-bottom: 20px;
+}
+
+#shop {
+  background: #fcfbe2;
+  font-family: Avenir;
+  text-align: center;
+  color: #046b62;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+</style>
