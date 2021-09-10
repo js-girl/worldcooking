@@ -3,7 +3,7 @@
     <div class="ue">
       <h1>World cooking</h1>
     </div>
-
+    <!-- あ -->
     <div section="content2">
       <div class="main-coppy">
         <h2>世界の料理を <br />日本で楽しもう。</h2>
