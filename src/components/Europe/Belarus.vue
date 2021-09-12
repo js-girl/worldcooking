@@ -31,7 +31,9 @@
       <div class="content">
         <!-- APIリンク#部分を変えてね -->
         <div class="mb-10">
-          <a href="#" class="btn btn-mod btn-border btn-circle btn-large"
+          <a
+            href="https://www.google.co.jp/maps/place/%E3%83%99%E3%83%A9%E3%83%AB%E3%83%BC%E3%82%B7%E5%AE%B6%E5%BA%AD%E6%96%99%E7%90%86+%E3%83%9F%E3%83%B3%E3%82%B9%E3%82%AF%E3%81%AE%E5%8F%B0%E6%89%80/@35.6500146,139.663927,11.14z/data=!4m5!3m4!1s0x60188b9bbfb063d3:0x34351a421e0414c0!8m2!3d35.6596859!4d139.7422363?authuser=0"
+            class="btn btn-mod btn-border btn-circle btn-large"
             >お店を探す</a
           >
         </div>

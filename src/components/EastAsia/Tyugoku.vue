@@ -29,7 +29,9 @@
       <div class="content">
         <!-- APIリンク#部分を変えてね -->
         <div class="mb-10">
-          <a href="#" class="btn btn-mod btn-border btn-circle btn-large"
+          <a
+            href="https://www.google.co.jp/maps/search/%E4%B8%AD%E8%8F%AF%E6%96%99%E7%90%86+/@35.68,139.76,12z/data=!4m2!2m1!6e5?authuser=0"
+            class="btn btn-mod btn-border btn-circle btn-large"
             >お店を探す</a
           >
         </div>
