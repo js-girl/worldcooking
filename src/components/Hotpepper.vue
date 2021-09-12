@@ -29,6 +29,10 @@ export default {
         .then((res) => res.data)
         .then((value) => {
           this.all = value.results.shop
+
+          console.log(value)
+          console.log(value.results)
+          console.log(value.results.shop)
         })
     },
   },
