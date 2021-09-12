@@ -1,8 +1,5 @@
 <template>
   <div id="app">
-
-    <hotpepper msg="Welcome to Your Vue.js App" />
-
     <div class="ue">
       <h1>World cooking</h1>
     </div>
@@ -24,27 +21,26 @@
     <div section="content1">
       <GoogleMap />
     </div>
+    <div section="content2">
+      <Research />
+    </div>
     <div section="content3">
       <Slide />
     </div>
 
     <footer><small>&copy;js-girls.2021</small></footer>
-
   </div>
 </template>
 
 <script>
-
-import Hotpepper from "./components/Hotpepper.vue";
+import Research from "./components/Research.vue"
 import GoogleMap from "./components/Map.vue"
 import Slide from "./components/Slide.vue"
-
 
 export default {
   name: "App",
   components: {
-
-    Hotpepper,
+    Research,
     GoogleMap,
     Slide,
   },

@@ -24,7 +24,7 @@ export default {
     getrestaurant: function () {
       this.axios
         .get(
-          "hotpepper/gourmet/v1/?key=703a952c5ae9eaa7&large_area=Z011&genre=G006&format=json"
+          "hotpepper/gourmet/v1/?key=703a952c5ae9eaa7&large_area=Z011&genre=G017&format=json"
         )
         .then((res) => res.data)
         .then((value) => {
@@ -46,7 +46,7 @@ export default {
 }
 
 #shop {
-  background: #d2e7fc;
+  background: #fcfbe2;
   font-family: Avenir;
   text-align: center;
   color: #046b62;
