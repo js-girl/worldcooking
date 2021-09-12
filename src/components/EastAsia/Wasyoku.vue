@@ -4,7 +4,7 @@
     <button class="batsu" v-on:click="close">×</button>
     <div id="gohan">
       <div class="content">
-        <div class="title">御膳</div>
+        <div class="title">和食御膳</div>
         <div class="kuni">日本</div>
       </div>
     </div>
@@ -20,7 +20,7 @@
       <div class="content">
         <div class="title">ストーリー</div>
         <div class="setumei">
-          和食は日本の伝統料理です。ここに伝統料理の内容を書きます。ウィキから引っ張っってきてもいいかもですね。
+          始まりは平安時代からと言われている。禅宗が流行した頃に出汁調理が行われ、発達したとされている。その後室町時代に本膳料理が誕生し、現在の御前形式と似た形になった。江戸時代には握り寿司が誕生、明治時代には肉食が普及し始め、現代に近い食事になった。
         </div>
       </div>
     </div>
@@ -29,7 +29,9 @@
       <div class="content">
         <!-- APIリンク#部分を変えてね -->
         <div class="mb-10">
-          <a href="#" class="btn btn-mod btn-border btn-circle btn-large"
+          <a
+            href="https://www.google.co.jp/maps/search/%E5%92%8C%E9%A3%9F/@35.68,139.76,12z/data=!4m2!2m1!6e5?authuser=0"
+            class="btn btn-mod btn-border btn-circle btn-large"
             >お店を探す</a
           >
         </div>
