@@ -3,10 +3,12 @@
     🍽 shop list 🍽
     <div id="shop">
       <div v-for="food in all" :key="food.id">
-        <img :src="food.logo_image" alt="" />
+        <div class="shopContent">
+          <img :src="food.logo_image" alt="" />
 
-        <br />
-        <a v-bind:href="food.urls.pc">{{ food.name }}</a>
+          <br />
+          <a v-bind:href="food.urls.pc">{{ food.name }}</a>
+        </div>
       </div>
     </div>
     <br />
@@ -60,11 +62,18 @@ export default {
 }
 
 #shop {
-  background: #d2e7fc;
+  background: #fcfbe2;
   font-family: Avenir;
-  text-align: center;
+  align-items: end;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   color: #046b62;
   padding-top: 50px;
   padding-bottom: 50px;
+}
+.shopContent {
+  margin-left: 5px;
+  margin-top: 5px;
 }
 </style>
