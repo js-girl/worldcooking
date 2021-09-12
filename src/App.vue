@@ -1,19 +1,18 @@
 <template>
   <div id="app">
-
     <hotpepper msg="Welcome to Your Vue.js App" />
 
     <div class="ue">
       <h1>World cooking</h1>
     </div>
-    <!-- あ -->
+
     <div section="content2">
       <div class="main-coppy">
         <h2>世界の料理を <br />日本で楽しもう。</h2>
       </div>
       <div class="sub-coppy">世界の料理、集めました。</div>
       <div class="main-pic">
-        <img class="pict" src="./images/wasyoku.jpg" width="500px" />
+        <img class="pictop" src="./images/wasyoku.jpg" width="500px" />
       </div>
       <div class="about">
         このwebサイトでは、様々な国の伝統料理を紹介しています。
@@ -29,21 +28,17 @@
     </div>
 
     <footer><small>&copy;js-girls.2021</small></footer>
-
   </div>
 </template>
 
 <script>
-
-import Hotpepper from "./components/Hotpepper.vue";
+import Hotpepper from "./components/Hotpepper.vue"
 import GoogleMap from "./components/Map.vue"
 import Slide from "./components/Slide.vue"
-
 
 export default {
   name: "App",
   components: {
-
     Hotpepper,
     GoogleMap,
     Slide,
@@ -87,7 +82,7 @@ footer {
   margin-top: 50px;
   margin-left: 50%;
 }
-.pict {
+.pictop {
   box-shadow: -40px 40px #ffc9d2;
 }
 
