@@ -30,7 +30,9 @@
       <div class="content">
         <!-- APIリンク#部分を変えてね -->
         <div class="mb-10">
-          <a href="#" class="btn btn-mod btn-border btn-circle btn-large"
+          <a
+            href="https://www.google.co.jp/maps/place/Casa+de+Eduardo/@35.68,139.76,11z/data=!4m5!3m4!1s0x6018f2ea028fffff:0xf903d0a79866987e!8m2!3d35.6980457!4d139.6702119?hl=ja&authuser=0"
+            class="btn btn-mod btn-border btn-circle btn-large"
             >お店を探す</a
           >
         </div>
