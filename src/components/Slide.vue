@@ -116,11 +116,11 @@ ul {
   }
 }
 .slide img:first-child {
-  animation: loop 120s -60s linear infinite;
+  animation: loop 360s -180s linear infinite;
 }
 
 .slide img:last-child {
-  animation: loop2 120s linear infinite;
+  animation: loop2 180s linear infinite;
 }
 .slide:hover ul {
   animation-play-state: paused;
