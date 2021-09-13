@@ -24,14 +24,24 @@ export default {
   },
   methods: {
     getrestaurant: function () {
-      this.axios
-        .get(
-          "hotpepper/gourmet/v1/?key=703a952c5ae9eaa7&large_area=Z011&genre=G017&format=json"
-        )
-        .then((res) => res.data)
+      fetch(
+        "https://thawing-dawn-38623.herokuapp.com/https://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=703a952c5ae9eaa7&large_area=Z011&genre=G017&format=json"
+      )
+        .then((res) => {
+          return res.json()
+        })
         .then((value) => {
           this.all = value.results.shop
         })
+
+      // this.axios
+      //   .get(
+      //     "hotpepper/gourmet/v1/?key=703a952c5ae9eaa7&large_area=Z011&genre=G006&format=json"
+      //   )
+      //   .then((res) => res.data)
+      //   .then((value) => {
+      //     this.all = value.results.shop
+      //   })
     },
   },
   mounted() {
