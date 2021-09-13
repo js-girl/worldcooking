@@ -14,24 +14,31 @@
     <div class="end">
       <div v-if="genre === 'wasyoku'">
         <Wasyoku />
+        <button v-on:click="close">Close</button>
       </div>
       <div v-else-if="genre === 'yousyoku'">
         <Yousyoku />
+        <button v-on:click="close">Close</button>
       </div>
       <div v-else-if="genre === 'italian'">
         <Hotpepper />
+        <button v-on:click="close">Close</button>
       </div>
       <div v-else-if="genre === 'china'">
         <China />
+        <button v-on:click="close">Close</button>
       </div>
       <div v-else-if="genre === 'koria'">
         <Koria />
+        <button v-on:click="close">Close</button>
       </div>
       <div v-else-if="genre === 'asia'">
         <Asia />
+        <button v-on:click="close">Close</button>
       </div>
       <div v-else-if="genre === 'kakkoku'">
         <Kakkoku />
+        <button v-on:click="close">Close</button>
       </div>
       <div v-else></div>
     </div>
@@ -63,6 +70,9 @@ export default {
     }
   },
   methods: {
+    close: function () {
+      this.genre = false
+    },
     wasyoku: function () {
       this.genre = "wasyoku"
     },
